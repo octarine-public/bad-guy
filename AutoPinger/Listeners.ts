@@ -1,4 +1,4 @@
-import { ArrayExtensions, Color, Entity, EntityManager, EventsSDK, GameRules, GameState, Hero, LocalPlayer, MinimapSDK, PingType_t, Vector2, Vector3 } from "wrapper/Imports"
+import { ArrayExtensions, Color, Entity, EntityManager, GameRules, GameState, Hero, LocalPlayer, MinimapSDK, PingType_t, Vector2, Vector3 } from "wrapper/Imports"
 import { DebugPing, HeroesList, Interval_val, State } from "./Menu"
 let Sleep = 0
 let Heroes: Hero[] = []
@@ -33,7 +33,7 @@ export function Draw() {
 	if (!State.value || !DebugPing.value || Pos.IsZero())
 		return
 	const time = GameRules?.RawGameTime ?? 0
-	MinimapSDK.DrawPing(Pos, Color.Green, time + ConVars.GetInt("dota_minimap_ping_duration"))
+	MinimapSDK.DrawPing(Pos, Color.Green, time + (ConVars.GetInt("dota_minimap_ping_duration") ?? 3))
 }
 
 function HeroPing(hero: Hero) {
@@ -61,10 +61,6 @@ export function EntityDestroyed(x: Entity) {
 		ArrayExtensions.arrayRemove(Heroes, x)
 	}
 }
-EventsSDK.on("EntityNameChanged", x => {
-	if (x instanceof Hero)
-		UpdateMenu()
-})
 
 export function GameStarted() {
 	HeroesList.enabled_values.forEach((_, key) => HeroesList.enabled_values.set(key, false))
