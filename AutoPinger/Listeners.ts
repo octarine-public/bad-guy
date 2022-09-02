@@ -33,7 +33,8 @@ export function Draw() {
 	if (!State.value || !DebugPing.value || Pos.IsZero())
 		return
 	const time = GameRules?.RawGameTime ?? 0
-	MinimapSDK.DrawPing(Pos, Color.Green, time + (ConVars.GetInt("dota_minimap_ping_duration") ?? 3))
+	const getInt = ConVars.Get("dota_minimap_ping_duration")
+	MinimapSDK.DrawPing(Pos, Color.Green, time + (typeof getInt === "number" ? getInt : 3))
 }
 
 function HeroPing(hero: Hero) {
