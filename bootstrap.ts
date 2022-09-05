@@ -1,5 +1,5 @@
 
-import { DOTAGameUIState_t, EventsSDK, GameRules, GameState, LocalPlayer } from "wrapper/Imports"
+import { DOTAGameUIState_t, EventsSDK, GameRules, GameState, LocalPlayer } from "github.com/octarine-public/wrapper/wrapper/Imports"
 import * as AutoFeed from "./AutoFeed/Listeners"
 import * as AutoLaugh from "./AutoLaugh/Listeners"
 import * as AutoPinger from "./AutoPinger/Listeners"

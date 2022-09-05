@@ -1,4 +1,4 @@
-import { Courier, Creep, EntityManager, Hero, LocalPlayer, Unit } from "wrapper/Imports"
+import { Courier, Creep, EntityManager, Hero, LocalPlayer, Unit } from "github.com/octarine-public/wrapper/wrapper/Imports"
 import { ControllablesMode, ModeSpinner, SpinnerKey, State } from "./Menu"
 
 function MoveUnit(x: Unit) {

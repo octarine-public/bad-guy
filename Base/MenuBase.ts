@@ -1,4 +1,4 @@
-import { Menu as MenuSDK } from "wrapper/Imports"
+import { Menu as MenuSDK } from "github.com/octarine-public/wrapper/wrapper/Imports"
 export let Menu = MenuSDK.AddEntryDeep(["Utility", "Bad Guy"], ["panorama/images/hud/reborn/icon_magic_resist_psd.vtex_c"])
 export let MainState = Menu.AddToggle("State")
 
