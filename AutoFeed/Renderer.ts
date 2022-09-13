@@ -1,4 +1,4 @@
-import { Color, Hero, RendererSDK, Unit } from "github.com/octarine-public/wrapper/wrapper/Imports"
+import { Color, Hero, RendererSDK, Unit } from "github.com/octarine-public/wrapper/index"
 import { filterUnits, Units } from "./Listeners"
 import { DrawTextSize, SwitchUnit } from "./Menu"
 

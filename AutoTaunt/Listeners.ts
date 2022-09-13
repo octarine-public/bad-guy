@@ -1,4 +1,4 @@
-import { GameRules, GameState, LocalPlayer } from "github.com/octarine-public/wrapper/wrapper/Imports"
+import { GameRules, GameState, LocalPlayer } from "github.com/octarine-public/wrapper/index"
 import { Interval, State } from "./Menu"
 let Sleep = 0
 export function Tick() {

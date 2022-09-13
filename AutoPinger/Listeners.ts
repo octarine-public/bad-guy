@@ -1,4 +1,4 @@
-import { ArrayExtensions, Color, Entity, EntityManager, GameRules, GameState, Hero, LocalPlayer, MinimapSDK, PingType_t, Vector2, Vector3 } from "github.com/octarine-public/wrapper/wrapper/Imports"
+import { ArrayExtensions, Color, Entity, EntityManager, GameRules, GameState, Hero, LocalPlayer, MinimapSDK, PingType_t, Vector2, Vector3 } from "github.com/octarine-public/wrapper/index"
 import { DebugPing, HeroesList, Interval_val, State } from "./Menu"
 let Sleep = 0
 let Heroes: Hero[] = []

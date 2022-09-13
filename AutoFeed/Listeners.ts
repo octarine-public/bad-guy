@@ -1,4 +1,4 @@
-import { ArrayExtensions, Courier, DOTA_ABILITY_BEHAVIOR, Entity, EntityManager, GameSleeper, Hero, SpiritBear, Unit, Vector3 } from "github.com/octarine-public/wrapper/wrapper/Imports"
+import { ArrayExtensions, Courier, DOTA_ABILITY_BEHAVIOR, Entity, EntityManager, GameSleeper, Hero, SpiritBear, Unit, Vector3 } from "github.com/octarine-public/wrapper/index"
 import { Utility } from "../Base/Utils"
 import { arr_hero, DrawState, LogicFeedHeroState, MainState, State, SwitchUnit } from "./Menu"
 import { Renderer } from "./Renderer"
