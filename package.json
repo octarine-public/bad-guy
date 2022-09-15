@@ -1,6 +1,7 @@
 {
 	"name": "bad-guy",
 	"version": "1.0.0",
+	"main": "Bootstrap.ts",
 	"description": "Bad Guy",
 	"author": "SicdeX",
 	"devDependencies": {
