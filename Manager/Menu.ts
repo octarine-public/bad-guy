@@ -1,7 +1,6 @@
 import { Menu } from "github.com/octarine-public/wrapper/index"
 
-export default class MenuManager {
-
+export class MenuManager {
 	protected readonly Menu: Menu.Node
 	protected readonly IState: Menu.Toggle
 	protected readonly Entries: Menu.Node
@@ -15,9 +14,11 @@ export default class MenuManager {
 	protected readonly IAutoTauntDelay: Menu.Slider
 
 	constructor() {
-
 		this.Entries = Menu.AddEntry("Utility")
-		this.Menu = this.Entries.AddNode("Bad Guy", "panorama/images/hud/reborn/icon_magic_resist_psd.vtex_c")
+		this.Menu = this.Entries.AddNode(
+			"Bad Guy",
+			"panorama/images/hud/reborn/icon_magic_resist_psd.vtex_c"
+		)
 		this.IState = this.Menu.AddToggle("State")
 
 		this.AutoLaughTree = this.Menu.AddNode("Auto Laugh")
@@ -34,13 +35,11 @@ export default class MenuManager {
 	}
 
 	public get AutoTaunt() {
-		return this.State
-			&& this.IAutoTauntState.value
+		return this.State && this.IAutoTauntState.value
 	}
 
 	public get AutoLaugh() {
-		return this.State
-			&& this.IAutoLaughState.value
+		return this.State && this.IAutoLaughState.value
 	}
 
 	public get LaughDelay() {

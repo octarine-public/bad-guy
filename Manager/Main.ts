@@ -1,18 +1,16 @@
 import { EntityX, GameSleeperX, HeroX } from "github.com/octarine-private/immortal-core/index"
 import { GameState } from "github.com/octarine-public/wrapper/index"
-import MenuManager from "./Menu"
 
-export default class MainManager {
+import { MenuManager } from "./Menu"
 
+export class MainManager {
 	protected MyHero: Nullable<HeroX>
 	protected readonly Sleeper = new GameSleeperX()
 
-	constructor(protected readonly menu: MenuManager) { }
+	constructor(protected readonly menu: MenuManager) {}
 
-	public OnTick(dt: number) {
-
-		if (!this.menu.State || this.MyHero === undefined)
-			return
+	public OnTick(_dt: number) {
+		if (!this.menu.State || this.MyHero === undefined) return
 
 		this.AutoLaugh()
 		this.AutoTaunt()
@@ -27,13 +25,11 @@ export default class MainManager {
 	}
 
 	public OnEntityCreated(entity: EntityX) {
-		if (entity instanceof HeroX && entity.IsMyHero)
-			this.MyHero = entity
+		if (entity instanceof HeroX && entity.IsMyHero) this.MyHero = entity
 	}
 
 	public OnEntityDestroyed(entity: EntityX) {
-		if (this.MyHero?.Equals(entity))
-			this.MyHero = undefined
+		if (this.MyHero?.Equals(entity)) this.MyHero = undefined
 	}
 
 	protected AutoLaugh() {
