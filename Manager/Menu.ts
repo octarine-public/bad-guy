@@ -15,10 +15,7 @@ export class MenuManager {
 
 	constructor() {
 		this.Entries = Menu.AddEntry("Utility")
-		this.Menu = this.Entries.AddNode(
-			"Bad Guy",
-			"panorama/images/hud/reborn/icon_magic_resist_psd.vtex_c"
-		)
+		this.Menu = this.Entries.AddNode("Bad Guy", "panorama/images/hud/reborn/icon_magic_resist_psd.vtex_c")
 		this.IState = this.Menu.AddToggle("State")
 
 		this.AutoLaughTree = this.Menu.AddNode("Auto Laugh")

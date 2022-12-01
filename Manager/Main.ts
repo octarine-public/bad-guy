@@ -10,7 +10,9 @@ export class MainManager {
 	constructor(protected readonly menu: MenuManager) {}
 
 	public OnTick(_dt: number) {
-		if (!this.menu.State || this.MyHero === undefined) return
+		if (!this.menu.State || this.MyHero === undefined) {
+			return
+		}
 
 		this.AutoLaugh()
 		this.AutoTaunt()
@@ -25,11 +27,15 @@ export class MainManager {
 	}
 
 	public OnEntityCreated(entity: EntityX) {
-		if (entity instanceof HeroX && entity.IsMyHero) this.MyHero = entity
+		if (entity instanceof HeroX && entity.IsMyHero) {
+			this.MyHero = entity
+		}
 	}
 
 	public OnEntityDestroyed(entity: EntityX) {
-		if (this.MyHero?.Equals(entity)) this.MyHero = undefined
+		if (this.MyHero?.Equals(entity)) {
+			this.MyHero = undefined
+		}
 	}
 
 	protected AutoLaugh() {
