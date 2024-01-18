@@ -1,4 +1,3 @@
-import { EventsX } from "github.com/octarine-private/immortal-core/index"
 import { EventsSDK } from "github.com/octarine-public/wrapper/index"
 
 import { MainManager } from "./Manager/Main"
@@ -9,10 +8,10 @@ const IManager = new MainManager(IMenu)
 
 EventsSDK.on("Tick", dt => IManager.OnTick(dt))
 
-EventsX.on("GameEnded", () => IManager.OnGameEnded())
+EventsSDK.on("GameEnded", () => IManager.OnGameEnded())
 
-EventsX.on("GameStarted", () => IManager.OnGameStarted())
+EventsSDK.on("GameStarted", () => IManager.OnGameStarted())
 
-EventsX.on("EntityCreated", entity => IManager.OnEntityCreated(entity))
+EventsSDK.on("EntityCreated", entity => IManager.OnEntityCreated(entity))
 
-EventsX.on("EntityDestroyed", entity => IManager.OnEntityDestroyed(entity))
+EventsSDK.on("EntityDestroyed", entity => IManager.OnEntityDestroyed(entity))
